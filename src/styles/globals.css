@@ -1,0 +1,241 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #172f28;
+  --color-secondary: #23496d;
+  --color-bg: #e3e1e0;
+
+  --font-sans: var(--font-lato), sans-serif;
+
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-container: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Reset to Match Legacy */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  color: #23496d;
+  background-color: #e3e1e0;
+}
+
+.view-in-browser-container {
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.view-in-browser {
+  text-decoration: underline;
+  color: #23496d;
+}
+
+/* We use a wrapper class for the main container to match legacy exactly */
+.legacy-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 35px 30px 25px;
+}
+
+.logo-placeholder {
+  width: 175px;
+  height: 43px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #172f28;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+/* Featured Property */
+.featured-property .property-image {
+  width: 100%;
+  height: auto;
+  /* Changed from 337px to auto for better dynamic scaling */
+  min-height: 200px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.featured-property .property-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.property-title {
+  font-size: 14px;
+  /* Matches user request for 14px */
+  color: #000;
+  margin-bottom: 30px;
+}
+
+/* Sections */
+.properties-section {
+  padding: 30px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Property Cards */
+.property-card {
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  margin-bottom: 25px;
+}
+
+.property-card:hover {
+  transform: translateY(-2px);
+}
+
+.property-card-image {
+  /* height: auto; */
+  /* Allow auto height for direct img tags */
+  /* min-height: 337px; */
+  /* display: block; */
+  height: 337px;
+  width: 100%;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  object-fit: cover;
+}
+
+.property-card-content {
+  padding: 15px 30px 10px;
+}
+
+.property-location {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.property-details {
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.property-price-small {
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+}
+
+/* Buttons */
+.btn-container {
+  text-align: center;
+}
+
+.btn-container-top {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-all-btn {
+  display: inline-block;
+  background: #172f28;
+  color: white;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 25px 0;
+}
+
+/* Footer */
+.footer {
+  background: #172f28;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.footer-logo-placeholder {
+  width: 140px;
+  height: 35px;
+  /* background: #f0f0f0; */
+  /* border: 1px solid #ccc; */
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  font-size: 12px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-link {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  text-decoration: none;
+}
+
+.social-icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: block;
+}
+
+.unsubscribe-link {
+  color: #ffffff;
+  background: none;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .legacy-container {
+    margin: 10px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}
